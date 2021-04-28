@@ -119,7 +119,6 @@ class SyslogUDPHandler(socketserver.BaseRequestHandler):
             c.set_field('dst', ''.join(li['TARGET_IP']))
             c.set_field('message', data[1])
             print(c.build_cef())
-            #print(severity)
             #logging.info(c.build_cef())
             byte_message = bytes(c.build_cef(), "utf-8")
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -151,7 +150,6 @@ class SyslogUDPHandler(socketserver.BaseRequestHandler):
             c.set_field('proto', str(jsonstring.get('protocols_and_ports')).replace('[','').replace(']','').replace("'",'').split('/')[0])
             # Finally, generate the CEF line
             print(c.build_cef())
-            print(version, vendor, device_type)
             #logging.info(c.build_cef())
             byte_message = bytes(c.build_cef(), "utf-8")
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
