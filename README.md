@@ -7,6 +7,8 @@ Currently tested with User-Defined, Security and ASM events.
 
 ```pip3 install cefevent```
 
+Change ```#logging.info(c.build_cef())``` to log message to file
+
 Change ```sock.sendto(byte_message, ('localhost', 8888))``` to relay cef messages to arcsight logger.
 
 to run script: ```python3 pysyslog.py```
