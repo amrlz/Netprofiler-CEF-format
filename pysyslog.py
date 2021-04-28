@@ -83,7 +83,6 @@ class SyslogUDPHandler(socketserver.BaseRequestHandler):
 
         # socket = self.request[1]
         if data[:5] == '<132>':
-            #print(data)
             c = CEFEvent()
             data = data.split(']')
             data0 = data[0].split('[')
@@ -126,7 +125,6 @@ class SyslogUDPHandler(socketserver.BaseRequestHandler):
             
         else:
             # Equal signs will be automatically escaped (and so will pipes (|) and backslashes (\\), as per the white paper specification)
-            #print(data)
             data = data.split('] ')
             data2 = data[0].split('][')[1].split()[0]
             version = data[0].split('][')[0].split(']: ')[1].split()[4].split('=')[1].replace('"','')
