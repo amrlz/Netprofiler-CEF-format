@@ -5,6 +5,8 @@ Script that converts SteelCentral Netprofiler Syslog messages in to CEF format.
 
 Currently tested with User-Defined, Security and ASM events.
 
+```pip3 install cefevent```
+
 Change ```sock.sendto(byte_message, ('localhost', 8888))``` to relay cef messages to arcsight logger.
 
 to run script: ```python3 pysyslog.py```
