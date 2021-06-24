@@ -3,7 +3,7 @@ Netprofiler Arcsght Integration
 
 Script that converts SteelCentral Netprofiler Syslog messages in to CEF format.
 
-Req: Python3, cefevent
+Req: Python3, pip3, cefevent
 
 Currently tested with User-Defined, Security and ASM events.
 
